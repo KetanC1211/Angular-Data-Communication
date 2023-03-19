@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  listarray: any[] = []
+  listarray: any[] = [];
+  
 
   constructor() { }
 
@@ -19,6 +20,7 @@ export class ChildComponent implements OnInit {
 
   @Input() cName :any;
 
+  
 
 
 }

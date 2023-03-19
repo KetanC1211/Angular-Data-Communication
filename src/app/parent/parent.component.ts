@@ -10,6 +10,7 @@ import { ChildComponent } from './child/child.component';
 })
 export class ParentComponent implements OnInit {
   @ViewChild(ChildComponent) ViewChild!: ChildComponent;
+  response : string ="";
 
   name = "";
   parentObj = { "firstName": "" , "lastName" : ""};
@@ -25,9 +26,10 @@ export class ParentComponent implements OnInit {
   })
  
   onSubmit() {
-    console.log(this.reactiveForm.value);
+    console.log(this.ViewChild.listarray);
     this.pName = this.reactiveForm.value;
     this.ViewChild.listarray.push(this.pName);
+    this.response = "Total "+this.ViewChild.listarray.length +" " + "record is added"
   }
 
   onClickTransferNameToChild(){
