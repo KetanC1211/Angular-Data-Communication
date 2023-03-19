@@ -1,0 +1,24 @@
+*{
+    width: 50%;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    background-color:aqua;
+}
+
+form{
+    margin-left: 50px ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}   
+
+::ng-deep form mat-input-element {
+border: 2px;
+}
+
+form input {
+    width: 100%;
+}

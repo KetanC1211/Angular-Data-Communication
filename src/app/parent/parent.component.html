@@ -1,0 +1,24 @@
+<div>
+    <h1> Parent Component</h1>
+
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        
+        <label for="first-name">First Name: </label>
+        <input id="first-name" type="text" formControlName="firstName">
+        
+        <br>
+
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName">
+        
+        <br>
+    
+        <button (click)="onClickTransferNameToChild()">Submit</button>
+    
+    </form>
+</div>
+<app-child 
+[name]="name"
+[cName]="pName"
+>
+</app-child>
