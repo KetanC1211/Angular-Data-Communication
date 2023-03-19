@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ChildComponent } from './child/child.component';
 
 
 @Component({
@@ -8,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  @ViewChild(ChildComponent) ViewChild!: ChildComponent;
 
   name = "";
   parentObj = { "firstName": "" , "lastName" : ""};
@@ -25,6 +27,7 @@ export class ParentComponent implements OnInit {
   onSubmit() {
     console.log(this.reactiveForm.value);
     this.pName = this.reactiveForm.value;
+    this.ViewChild.listarray.push(this.pName);
   }
 
   onClickTransferNameToChild(){

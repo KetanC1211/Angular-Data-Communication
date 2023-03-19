@@ -4,3 +4,19 @@
 <br>
 
 <p>{{cName.firstName}} {{cName.lastName}}</p>
+
+
+<table>
+<tr>
+    <th>No.</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+</tr>
+<tr *ngFor="let obj of listarray;index as i ">
+    <td>{{i}}</td>
+    <td>{{obj.firstName}}</td>
+    <td>{{obj.lastName}}</td>
+</tr>
+</table>
+
+  

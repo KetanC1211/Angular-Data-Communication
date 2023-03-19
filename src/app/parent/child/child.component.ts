@@ -7,13 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  listarray: any[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   @Input() name : any;
 
   @Input() cName :any;
+
+
 
 }
